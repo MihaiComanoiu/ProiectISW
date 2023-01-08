@@ -11,7 +11,7 @@ const Chef = () => (
    </div>
 
    <div className="app__wrapper_info">
-     <SubHeading title="Chef's Word" />
+     <SubHeading tittle="Chef's Word" />
      <h1 className="headtext__cormorant">What we believe in</h1>
 
      <div className="app__chef-content">
