@@ -23,15 +23,13 @@ const Navbar = () => {
         <li className='p__opensans'>
           <Link to='/menu'>Menu</Link>
         </li>
+        <li className='p__opensans'>
+          <Link to='/login'>Login/Register</Link>
+        </li>
       </ul>
       <div className='app__navbar-login'>
-        <a href='#login' className='p__opensans'>
-          Login/Register
-        </a>
+        <a href='#login' className='p__opensans'></a>
         <div />
-        <a href='/' className='p__opensans'>
-          Book Table
-        </a>
       </div>
       <div className='app__navbar-smallscreen'>
         <GiHamburgerMenu
@@ -51,16 +49,7 @@ const Navbar = () => {
                 <a href='#home'>Home</a>
               </li>
               <li className='p__opensans'>
-                <a href='#about'>About</a>
-              </li>
-              <li className='p__opensans'>
-                <a href='#Menu'>Menu</a>
-              </li>
-              <li className='p__opensans'>
-                <a href='#awards'>Awards</a>
-              </li>
-              <li className='p__opensans'>
-                <a href='#contact'>Contact</a>
+                <a href='#about'>Menu</a>
               </li>
             </ul>
           </div>

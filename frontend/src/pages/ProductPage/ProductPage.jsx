@@ -29,6 +29,7 @@ const InfoContainer = styled.div`
 `
 const Title = styled.h1`
   font-weight: 200;
+  margin-bottom: 16px;
 `
 const Desc = styled.p`
   margin: 20px 0px;
@@ -82,7 +83,9 @@ const Product = () => {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await axios.get('http://localhost:1999/products/')
+        const res = await axios.get(
+          'http://localhost:1999/api/products/find/' + id
+        )
         setProduct(res.data)
       } catch (err) {}
     }
@@ -110,8 +113,8 @@ const Product = () => {
         </ImgContainer>
         <InfoContainer>
           <Title>{product.title}</Title>
-          <Desc>{product.desc}</Desc>
-          <Price>{product.price}</Price>
+          {/* <Desc>{product.desc}</Desc> */}
+          <Price>{product.price} lei</Price>
 
           <AddContainer>
             <AmountContainer>
