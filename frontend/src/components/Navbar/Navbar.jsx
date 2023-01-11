@@ -7,12 +7,15 @@ import { ShoppingCartOutlined } from '@material-ui/icons'
 
 import images from '../../constants/images'
 
+import { useSelector } from 'react-redux'
+
 import { Link } from 'react-router-dom'
 
 import './Navbar.css'
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
+  const quantity = useSelector((state) => state.cart.quantity)
 
   return (
     <nav className='app__navbar'>
@@ -32,7 +35,7 @@ const Navbar = () => {
       </ul>
       <div className='app__navbar-login'>
         <a href='#login' className='p__opensans'>
-          <Badge badgeContent={1} color='primary'>
+          <Badge badgeContent={quantity} color='primary'>
             <ShoppingCartOutlined />
           </Badge>
         </a>
