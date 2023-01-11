@@ -8,6 +8,8 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 
+import { addProduct } from '../../redux/cartRedux'
+
 import axios from 'axios'
 
 const Container = styled.div``
@@ -77,8 +79,7 @@ const Product = () => {
   const id = location.pathname.split('/')[2]
   const [product, setProduct] = useState({})
   const [quantity, setQuantity] = useState(1)
-  const [color, setColor] = useState('')
-  const [size, setSize] = useState('')
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const getProduct = async () => {
@@ -102,7 +103,9 @@ const Product = () => {
     }
   }
 
-  const handleClick = () => {}
+  const handleClick = () => {
+    dispatch(addProduct({ ...product }))
+  }
 
   return (
     <Container>
