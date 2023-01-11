@@ -1,22 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-import { AboutUs, Chef, FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu } from './container';
-import { Navbar } from './components';
-import './App.css';
+import Home from './pages/Home/Home'
+import ProductPage from './pages/ProductPage/ProductPage'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import './App.css'
 
 const App = () => (
   <div>
-    <Navbar />
-    <Header />
-    <AboutUs />
-    <SpecialMenu />
-    <Chef />
-    <Intro />
-    <Laurels />
-    <Gallery />
-    <FindUs />
-<Footer /> 
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/menu' element={<ProductPage />} />
+      </Routes>
+    </BrowserRouter>
   </div>
-);
+)
 
-export default App;
+export default App
