@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { MdOutlineRestaurantMenu } from 'react-icons/md'
 
+import { Badge } from '@material-ui/core'
+import { ShoppingCartOutlined } from '@material-ui/icons'
+
 import images from '../../constants/images'
 
 import { Link } from 'react-router-dom'
@@ -24,11 +27,15 @@ const Navbar = () => {
           <Link to='/menu'>Menu</Link>
         </li>
         <li className='p__opensans'>
-          <Link to='/login'>Login/Register</Link>
+          <Link to='/login'>Sign Up</Link>
         </li>
       </ul>
       <div className='app__navbar-login'>
-        <a href='#login' className='p__opensans'></a>
+        <a href='#login' className='p__opensans'>
+          <Badge badgeContent={1} color='primary'>
+            <ShoppingCartOutlined />
+          </Badge>
+        </a>
         <div />
       </div>
       <div className='app__navbar-smallscreen'>
