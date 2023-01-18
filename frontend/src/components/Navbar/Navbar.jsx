@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { MdOutlineRestaurantMenu } from 'react-icons/md'
 
-import { clearCart } from '../../redux/cartRedux'
-
 import { Badge } from '@material-ui/core'
 import { ShoppingCartOutlined } from '@material-ui/icons'
 
@@ -31,9 +29,6 @@ const Navbar = () => {
         </li>
         <li className='p__opensans'>
           <Link to='/menu'>Menu</Link>
-        </li>
-        <li className='p__opensans'>
-          <Link to='/login'>Sign Up</Link>
         </li>
       </ul>
       <div className='app__navbar-login'>

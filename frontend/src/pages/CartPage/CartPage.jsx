@@ -57,6 +57,7 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1.5rem;
 `
 
 const ProductDetail = styled.div`
@@ -66,6 +67,8 @@ const ProductDetail = styled.div`
 
 const Image = styled.img`
   width: 200px;
+  height: 200px;
+  object-fit: cover;
 `
 
 const Details = styled.div`
@@ -78,13 +81,6 @@ const Details = styled.div`
 const ProductName = styled.span``
 
 const ProductId = styled.span``
-
-const ProductColor = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: ${(props) => props.color};
-`
 
 const PriceDetail = styled.div`
   flex: 1;
