@@ -25,7 +25,6 @@ const AboutUs = () => (
         <h1 className="headtext__cormorant">Our History</h1>
         <img src={images.spoon} alt="about_spoon" className="spoon__img" />
         <p className="p__opensans">The restaurant was founded by our great-grandfather, old Gericht, and he left it to us as a family legacy. His wish was to carry on the family tradition and take care of this restaurant with joy and honor, which was the treasure of his life from which he earned his living and supported his family.</p>
-        <button type="button" className="custom__button">Know More</button>
       </div>  
 
 
