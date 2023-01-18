@@ -211,7 +211,7 @@ const Cart = () => {
                     />
                   </ProductAmountContainer>
                   <ProductPrice>
-                    $ {product.price * product.quantity}
+                     {product.price * product.quantity} lei
                   </ProductPrice>
                 </PriceDetail>
               </Product>
@@ -222,26 +222,26 @@ const Cart = () => {
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
             <SummaryItem>
               <SummaryItemText>Subtotal</SummaryItemText>
-              <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
+              <SummaryItemPrice>{cart.total} lei</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Estimated Shipping</SummaryItemText>
-              <SummaryItemPrice>$ 5.90</SummaryItemPrice>
+              <SummaryItemPrice>5.90 lei</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Shipping Discount</SummaryItemText>
-              <SummaryItemPrice>$ -5.90</SummaryItemPrice>
+              <SummaryItemPrice>-5.90 lei</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type='total'>
               <SummaryItemText>Total</SummaryItemText>
-              <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
+              <SummaryItemPrice>{cart.total} lei</SummaryItemPrice>
             </SummaryItem>
             <StripeCheckout
               name='Enter your data'
               image='https://images.pexels.com/photos/210742/pexels-photo-210742.jpeg?auto=compress&cs=tinysrgb&w=600'
               billingAddress
               shippingAddress
-              description={`Your total is $${cart.total}`}
+              description={`Your total is ${cart.total} lei`}
               amount={cart.total * 100}
               token={onToken}
               stripeKey={KEY}
