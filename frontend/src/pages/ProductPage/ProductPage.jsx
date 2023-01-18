@@ -92,9 +92,7 @@ const Product = () => {
     }
     getProduct()
   }, [id])
-
-  console.log(id)
-
+  console.log('Product', product)
   const handleQuantity = (type) => {
     if (type === 'dec') {
       quantity > 1 && setQuantity(quantity - 1)
@@ -104,7 +102,7 @@ const Product = () => {
   }
 
   const handleClick = () => {
-    dispatch(addProduct({ ...product }))
+    dispatch(addProduct({ ...product, quantity }))
   }
 
   return (
