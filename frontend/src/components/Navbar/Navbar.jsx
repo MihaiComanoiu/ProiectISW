@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { MdOutlineRestaurantMenu } from 'react-icons/md'
 
+import { clearCart } from '../../redux/cartRedux'
+
 import { Badge } from '@material-ui/core'
 import { ShoppingCartOutlined } from '@material-ui/icons'
 
 import images from '../../constants/images'
 
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { Link } from 'react-router-dom'
 
@@ -16,6 +18,7 @@ import './Navbar.css'
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
   const quantity = useSelector((state) => state.cart.quantity)
+  const dispatch = useDispatch()
 
   return (
     <nav className='app__navbar'>
@@ -35,9 +38,11 @@ const Navbar = () => {
       </ul>
       <div className='app__navbar-login'>
         <a href='#login' className='p__opensans'>
-          <Badge badgeContent={quantity} color='primary'>
-            <ShoppingCartOutlined />
-          </Badge>
+          <Link to='/cart'>
+            <Badge badgeContent={quantity} color='primary'>
+              <ShoppingCartOutlined />
+            </Badge>
+          </Link>
         </a>
         <div />
       </div>
