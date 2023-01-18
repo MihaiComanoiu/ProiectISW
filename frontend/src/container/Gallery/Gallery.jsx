@@ -27,7 +27,7 @@ const Gallery = () => {
         <h1 className="headtext__cormorant">Photo Gallery</h1>
         <p className="p__opensans" style={{color: '#AAA', marginTop: '2rem' }}>
   Here are some of our delicious menus. We hope you will be amazed by our dishes and we look forward to tasting them.</p>
-        <button type="button" className="custom__button">View More</button>
+
       </div>
       <div className="app__gallery-images">
         <div className="app__gallery-images_container" ref={scrollRef}>

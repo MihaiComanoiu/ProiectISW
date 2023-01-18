@@ -15,8 +15,6 @@ const FindUs = () => (
         <p className="p__opensans">Monday - Friday: 09:00 AM - 19:00 PM</p>
         <p className="p__opensans">Saturday - Sunday: 09:00 AM - 22: 00 PM</p>
       </div>
-      <button className="custom__button" style={{marginTop: '2rem'}}>Visit Us</button>
-
     </div>
 
     <div className="app__wrapper_img">
